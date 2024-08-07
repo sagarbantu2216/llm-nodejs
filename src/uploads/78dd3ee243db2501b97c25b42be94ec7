@@ -1,0 +1,27 @@
+Product,DD,,Product,INFIN Payment Plan ,,
+Available Branch/Online/Both ,Both,,Available Branch/Online/Both ,Both,,
+Min loan amount,1,,Min $ Amt ,N/A ,,
+Max loan amount,255,,Max $ Amt ,N/A ,,
+Loan Fee ,$17.65/$100,,Min # Payments ,4,,
+Rescind Y/N ,Y,,Max # Payments ,6,,
+Rescind Timeframe,Orgination +1 Day ,,Min days,60,,
+Min days,2,,Max days,N/A,,
+Max days,31,,Number of EPPs,Once in a 12 month period,,
+Add On Loans ,no,,,,,
+Concurrent loans allowed?,no,,Loan Amount ,Calculated Fee ,Fee Charged ,Payback Amount 
+Renewal/Refinance ,no,,50,8.825,8.82,58.82
+Renewal/Refinance Count,0,,100,17.65,17.65,117.65
+Max Open Loans Allowed ,1,,150,26.475,26.47,176.47
+Renewal/Refinance Provisions ,N/A,,200,35.30,35.30,235.30
+min GMI,200,,255,45.0075,45.00,300.00
+max GMI% of loan,25%,, , ,,
+State Loan cap #,no,, ,,,
+State credit cap,"$300
+*Including Fee",,,,,
+,,,,,,
+* Loan Increment Values,0.01,,,,,
+* Payments aligning to Pay Freq,,,,,,
+* No Auto Grace Days for Deposit,,,,,,
+* ACHs to be sent on due date,,,,,,
+* Due Dates can fall on Holidays,,,,,,
+* Cut Time(s) for ACH and DC,3PM PST,,,,,

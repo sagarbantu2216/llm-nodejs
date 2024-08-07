@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embed Shopify Analytics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .iframe-container {
+            width: 80%;
+            height: 70%;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="iframe-container">
+        <iframe id="shopify-analytics" src="https://admin.shopify.com/store/663dbb-4d/dashboards" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <button id="reload-btn">Reload Analytics</button>
+    <script>
+        document.getElementById('reload-btn').addEventListener('click', function() {
+            const iframe = document.getElementById('shopify-analytics');
+            iframe.src = iframe.src; // Reload the iframe by resetting its src attribute
+        });
+    </script>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert Strings Case</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        .output {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #333;
+        }
+        .buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+        button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Convert Array of Strings Case</h2>
+        <div class="buttons">
+            <button onclick="convertToUpper()">Convert to Uppercase</button>
+            <button onclick="convertToLower()">Convert to Lowercase</button>
+        </div>
+        <div class="output" id="output"></div>
+    </div>
+
+    <script>
+        const stringsArray = ['apple', 'banana', 'cherry'];
+
+        function convertToUpper() {
+            // Convert each string in the array to uppercase
+            let upperCaseArray = stringsArray.map(function(string) {
+                return string.toUpperCase();
+            });
+
+            // Display the result
+            document.getElementById('output').innerText = 'Uppercase Array: ' + upperCaseArray.join(', ');
+        }
+
+        function convertToLower() {
+            // Convert each string in the array to lowercase
+            let lowerCaseArray = stringsArray.map(function(string) {
+                return string.toLowerCase();
+            });
+
+            // Display the result
+            document.getElementById('output').innerText = 'Lowercase Array: ' + lowerCaseArray.join(', ');
+        }
+    </script>
+</body>
+</html> -->
