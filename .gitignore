@@ -70,3 +70,5 @@ node_modules/
 
 # vector files
 ../src/uploads
+
+.package-lock.json
