@@ -62,10 +62,13 @@ node_modules/
 # Yarn Integrity file
 .yarn-integrity
 
+# dotenv environment variables file
+.env
+
 # dataconnect generated files
 .dataconnect
 
 # vector files
 ../src/uploads
-
+.uploads
 .package-lock.json
