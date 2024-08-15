@@ -26,6 +26,7 @@ const app = express();
 app.use(cors())
 app.use(express.json());
 app.use(bodyParser.json({ limit: '50mb' }));
+const upload = multer({ dest: "uploads/" }); // Temporarily save files to 'uploads/' folder
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 const pinecone = new Pinecone({
     apiKey: process.env.PINECONE_API_KEY,
@@ -50,17 +51,17 @@ const splitter = new RecursiveCharacterTextSplitter({
   chunkOverlap: 100, // Small overlap to maintain context between chunks
 });
 
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, "uploads/"); // Save files to 'uploads/' folder
-  },
-  filename: function (req, file, cb) {
-    const originalName = file.originalname;
-    cb(null, originalName); // Keep the original file name with the extension
-  }
-});   
+// const storage = multer.diskStorage({
+//   destination: function (req, file, cb) {
+//     cb(null, "uploads/"); // Save files to 'uploads/' folder
+//   },
+//   filename: function (req, file, cb) {
+//     const originalName = file.originalname;
+//     cb(null, originalName); // Keep the original file name with the extension
+//   }
+// });   
 
-const upload = multer({ storage: storage });
+// const upload = multer({ storage: storage });
 
 const deleteFile = (filePath) => {
   fs.unlink(filePath, (err) => {
