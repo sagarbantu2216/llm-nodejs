@@ -72,3 +72,7 @@ node_modules/
 ../src/uploads
 .uploads
 .package-lock.json
+
+uploads
+
+yarn.lock

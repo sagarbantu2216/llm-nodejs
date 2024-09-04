@@ -124,7 +124,7 @@ app.post("/upload", upload.array("files", 10), async (req, res) => {
           headers: myHeaders
         };
         
-        const response = await fetch("http://localhost:4000/forms/libreoffice/convert", requestOptions);
+        const response = await fetch("http://44.243.166.197:3000/forms/libreoffice/convert", requestOptions);
         
         if (response.ok) {
           const newpath = `save/${file.originalname}.pdf`
@@ -272,5 +272,5 @@ app.post("/ask", async (req, res) => {
   }
 });
 
-const PORT = 8000;
+const PORT = 4000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
